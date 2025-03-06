@@ -1,4 +1,4 @@
-# Sysadmin-basics
+# System Administrator Basics
 
 As a soon-to-be System Administrator, you'll need to be prepared with the right set of tools to manage servers, troubleshoot issues, and keep systems running smoothly. Here’s a comprehensive list of essential tools, commands, and concepts that you should have in your tool belt. These will not only enhance your ability to perform administrative tasks but also provide the flexibility to manage systems efficiently and with ease.
 
