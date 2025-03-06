@@ -198,3 +198,78 @@ Make sure you are root first by entering `su -`.
   - **Explanation**: Starts the OpenLDAP server daemon, enabling LDAP communication on the system.
 
 ---
+
+## **System Utility Commands**
+
+#### **date**  
+**Definition**: Displays or sets the system date and time.  
+- **Example**: `date`  
+  - **Explanation**: Shows the current system date and time.
+
+#### **uptime**  
+**Definition**: Displays how long the system has been running.  
+- **Example**: `uptime`  
+  - **Explanation**: Shows the current system uptime, including the number of users and system load.
+
+#### **hostname**  
+**Definition**: Shows or sets the system's hostname.  
+- **Example**: `hostname`  
+  - **Explanation**: Displays the current hostname of the system.
+
+#### **uname**  
+**Definition**: Displays system information such as the kernel name and version.  
+- **Example**: `uname -a`  
+  - **Explanation**: Shows detailed information about the kernel, including the system architecture and version.
+
+#### **which**  
+**Definition**: Locates where a command or file is stored.  
+- **Example**: `which ls`  
+  - **Explanation**: Finds the location of the `ls` command on your system.
+
+#### **cal**  
+**Definition**: Displays a calendar.  
+- **Example**: `cal 9 1977`  
+  - **Explanation**: Shows the calendar for September 1977.  
+- **Example**: `cal 2016`  
+  - **Explanation**: Displays the calendar for the year 2016.
+
+#### **bc**  
+**Definition**: A calculator program.  
+- **Example**: `bc`  
+  - **Explanation**: Opens the basic calculator. Type `quit` to exit.
+
+---
+
+## **Processes and Jobs**
+
+#### **Applications**  
+**Definition**: Programs that perform tasks and run as services.
+
+#### **Script**  
+**Definition**: A file containing a series of commands to be executed by the system.
+
+#### **Process**  
+**Definition**: A running program that is managed by the system.
+
+#### **Daemon**  
+**Definition**: A process that runs in the background until manually stopped.  
+- **Example**: `systemctl start apache2`  
+  - **Explanation**: Starts the Apache web server as a daemon.
+
+#### **Threads**  
+**Definition**: The smallest unit of a process that can be scheduled for execution.
+
+#### **Job**  
+**Definition**: A process running in the background that is controlled by the user.
+
+#### **systemctl or service**  
+**Definition**: Command used to manage system services.  
+- **Example**: `systemctl start servicename.service`  
+  - **Explanation**: Starts the specified service.  
+- **Example**: `systemctl stop servicename.service`  
+  - **Explanation**: Stops the specified service.  
+- **Example**: `systemctl status servicename.service`  
+  - **Explanation**: Displays the status of the specified service.  
+- **Example**: `systemctl enable servicename.service`  
+  - **Explanation**: Configures the service to start automatically at boot.  
+- **Example**: `syste
