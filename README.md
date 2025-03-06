@@ -272,4 +272,113 @@ Make sure you are root first by entering `su -`.
   - **Explanation**: Displays the status of the specified service.  
 - **Example**: `systemctl enable servicename.service`  
   - **Explanation**: Configures the service to start automatically at boot.  
-- **Example**: `syste
+- **Example**: `systemctl restart servicename.service`  
+  - **Explanation**: Restarts the specified service.  
+- **Example**: `systemctl reload servicename.service`  
+  - **Explanation**: Reloads the service configuration.  
+- **Example**: `systemctl list-units --all`  
+  - **Explanation**: Lists all units, including inactive services.  
+- **Example**: `systemctl poweroff`  
+  - **Explanation**: Shuts down the system.  
+- **Example**: `systemctl halt`  
+  - **Explanation**: Immediately halts the system.  
+- **Example**: `systemctl reboot`  
+  - **Explanation**: Reboots the system.
+
+#### **ps**  
+**Definition**: Displays a list of currently running processes.  
+- **Example**: `ps -e`  
+  - **Explanation**: Shows all the running processes.  
+- **Example**: `ps aux`  
+  - **Explanation**: Displays detailed information about all running processes.  
+- **Example**: `ps -ef`  
+  - **Explanation**: Shows all running processes in full format.  
+- **Example**: `ps -u username`  
+  - **Explanation**: Displays processes running under a specific user.
+
+#### **top**  
+**Definition**: Displays system information and running processes in real time.  
+- **Example**: `top`  
+  - **Explanation**: Opens a real-time view of the processes, showing CPU and memory usage.  
+- **Example**: `top -u username`  
+  - **Explanation**: Displays processes running under a specific user.  
+- **Example**: `press c`  
+  - **Explanation**: Toggles to show full command-line details of processes.  
+- **Example**: `press k`  
+  - **Explanation**: Allows the user to kill a process from the top view.  
+- **Example**: `press Shift+M,P`  
+  - **Explanation**: Sorts processes by memory or CPU usage, respectively.
+
+#### **kill**  
+**Definition**: Terminates a process.  
+- **Example**: `kill PID`  
+  - **Explanation**: Kills the process with the specified PID (Process ID).  
+- **Example**: `kill -l`  
+  - **Explanation**: Lists all available signal types.  
+- **Example**: `kill -9 PID`  
+  - **Explanation**: Forcefully kills a process.  
+- **Example**: `kill -15 PID`  
+  - **Explanation**: Sends a SIGTERM signal to gracefully stop a process.  
+- **Example**: `killall processname`  
+  - **Explanation**: Kills all processes with the specified name.  
+- **Example**: `pkill processname`  
+  - **Explanation**: Kills processes by name.
+
+#### **crontab**  
+**Definition**: Manages cron jobs for scheduled tasks.
+
+#### **at**  
+**Definition**: Schedules a task to run once at a specified time.
+
+---
+
+## **Process Signals**
+
+### **Understanding Processes and Signals**
+- **Processes**: A running program that performs specific tasks on a computer system.  
+- **Signals**: A short message sent to a process, designed to interrupt or control its behavior without stopping the program.
+
+### **Types of Signals**
+#### **Standard Signals**  
+Predefined signals sent by the OS to control processes.
+
+- **SIGINT (Signal Interrupt)**  
+  - **Definition**: Interrupts a process.  
+  - **Example**: `kill -SIGINT PID`  
+    - **Explanation**: Interrupts the process with the specified PID.
+
+- **SIGTERM (Signal Terminate)**  
+  - **Definition**: Gracefully terminates a process.  
+  - **Example**: `kill -SIGTERM PID`  
+    - **Explanation**: Terminates the process with the specified PID, allowing it to clean up before stopping.
+
+- **SIGKILL (Signal Kill)**  
+  - **Definition**: Forcefully kills a process.  
+  - **Example**: `kill -SIGKILL PID`  
+    - **Explanation**: Immediately terminates the process, without allowing it to clean up.
+
+- **SIGSTOP (Signal Stop)**  
+  - **Definition**: Pauses a running process.  
+  - **Example**: `kill -SIGSTOP PID`  
+    - **Explanation**: Suspends the process with the specified PID.
+
+- **SIGCONT (Signal Continue)**  
+  - **Definition**: Resumes a paused process.  
+  - **Example**: `kill -SIGCONT PID`  
+    - **Explanation**: Resumes a previously stopped process.
+
+- **SIGSEGV (Signal Segmentation Fault)**  
+  - **Definition**: Indicates an invalid memory access or segmentation fault.  
+  - **Example**: `kill -SIGSEGV PID`  
+    - **Explanation**: Sends a segmentation fault signal to the process, typically due to accessing invalid memory.
+
+#### **Real-Time Signals**  
+Signals that allow additional information to be sent along with the signal.
+- **SIGRTMIN**  
+  - **Definition**: Marks the beginning of real-time signals.
+
+- **SIGRTMAX**  
+  - **Definition**: Marks the end of real-time signals.
+
+- **Intermediate Signals**  
+  - **Definition**: Signals that fall between SIGRTMIN and SIGRTMAX.
